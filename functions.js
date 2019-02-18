@@ -7,6 +7,7 @@
  ****************************************************************/
 function getBookById(bookId, books) {
   // Your code goes here
+  return books.find(book => book.id === bookId);
 }
 
 /**************************************************************
@@ -18,6 +19,7 @@ function getBookById(bookId, books) {
  ****************************************************************/
 function getAuthorByName(authorName, authors) {
   // Your code goes here
+  return authors.find(author => author.name.toLowerCase() === authorName.toLowerCase());
 }
 
 /**************************************************************
@@ -28,6 +30,8 @@ function getAuthorByName(authorName, authors) {
  ****************************************************************/
 function bookCountsByAuthor(authors) {
   // Your code goes here
+  return authors.map(author => ({ author: author.name, bookCount: author.books.length }) );
+
 }
 
 /**************************************************************
@@ -41,6 +45,12 @@ function booksByColor(books) {
   const colors = {};
 
   // Your code goes here
+  books.forEach(book => if (colors[book.color]{
+    colors[book.color].push(book.title);
+  } else {
+    colors[]
+  }
+    }  ) )
 
   return colors;
 }
